@@ -9,7 +9,7 @@ p {
   font-family: "Inter", sans-serif;
   color: rgba(255, 255, 255, 0.5);
   font-weight: 400;
-  font-size: 1.4rem;
+  font-size: clamp(0.8rem, 2vw, 1.4rem);
   line-height: 30px;
   letter-spacing: 0%;
   text-align: center;
@@ -19,8 +19,7 @@ h1 {
   font-family: "Inter", sans-serif;
   font-weight: 900;
   font-style: Black;
-  font-size: 5rem;
-  line-height: 80px;
+  font-size: clamp(1rem, 5vw, 5rem);
   letter-spacing: 0%;
   text-align: center;
   color: white;
