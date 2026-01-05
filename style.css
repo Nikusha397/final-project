@@ -223,11 +223,9 @@ button {
 
 @media (max-width: 768px) {
   .block_one .blockitem_one .links {
-    display: none;
   }
 
   .block_one .blockitem_one .info {
-    display: none;
   }
 
   .block_one {
