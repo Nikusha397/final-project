@@ -194,7 +194,7 @@ button {
 
 @media (max-width: 1024px) {
   .block_one {
-    width: 95%;
+    width: 100%;
   }
 
   .block_one .blockitem_one .about {
@@ -231,7 +231,7 @@ button {
   }
 
   .block_one {
-    width: 98%;
+    width: 100%;
   }
   .block_one .blockitem_two {
     width: 90%;
