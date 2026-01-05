@@ -241,6 +241,7 @@ button {
   }
 
   .block_one .blockitem_one .info {
+    display: none;
   }
 
   .block_one {
