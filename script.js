@@ -50,3 +50,40 @@ document.addEventListener('click', function (e) {
     menu.style.display = 'none';
   }
 });
+
+
+
+  const btn = document.getElementById("sendBtn");
+  const message = document.getElementById("message");
+
+  btn.addEventListener("click", function(e) {
+    e.preventDefault();
+    message.textContent = "Your request is sent";
+    setTimeout(() => {
+      message.textContent = "";
+    }, 3000);
+  });
+
+
+
+  const video = document.getElementById("myVideo");
+  const playBtn = document.querySelector(".play");
+  
+  playBtn.addEventListener("click", () => {
+    video.play();
+    playBtn.style.display = "none";
+  });
+
+  video.addEventListener("click", () => {
+    video.pause();
+    playBtn.style.display = "flex";
+  });
+
+  video.addEventListener("ended", () => {
+    playBtn.style.display = "flex";
+  });
+
+
+
+
+
