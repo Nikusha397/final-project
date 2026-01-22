@@ -639,4 +639,8 @@ select {
   .block_two .blockitem_one .info .marks {
     gap: 1rem;
   }
+
+  .block_two .blockitem_one .info .mark {
+    font-size: 15px;
+  }
 }
