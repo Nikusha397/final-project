@@ -396,7 +396,7 @@ select {
   justify-content: center;
   align-items: center;
   position: relative;
-  transform: translate(100px, -450px);
+  transform: translate(250px, -350px);
   transition:
     transform 0.8s ease,
     width 0.8s ease,
