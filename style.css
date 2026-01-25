@@ -654,8 +654,8 @@ select {
   justify-content: center;
   align-items: center;
   text-align: center;
-  width: 450px;
-  height: 350px;
+  width: clamp(260px, 28vw, 450px);
+  height: clamp(260px, 22vw, 350px);
   border: 3px solid rgba(61, 178, 255, 1);
   gap: 2rem;
 }
@@ -684,8 +684,19 @@ select {
 .block_three .blockitem_two .box-group {
   display: flex;
   flex-direction: row;
-  width: 100%;
-  justify-content: space-evenly;
+  align-items: center;
+  gap: 2.5rem;
+}
+
+.block_three .blockitem_two .box-group .bb {
+  display: flex;
+  gap: 2.5rem;
+}
+
+.block_three .blockitem_two .box-group .bbb {
+  display: flex;
+  justify-content: center;
+  width: 85%;
 }
 
 @media (max-width: 1024px) {
@@ -838,7 +849,7 @@ select {
 
   .block_three .blockitem_two .box-group {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     width: 100%;
     justify-content: space-between;
   }
@@ -849,22 +860,35 @@ select {
     gap: 2rem;
   }
 
-  .block_three .blockitem_two .box-group {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    justify-content: space-evenly;
-    gap: 2rem;
+  .block_three .blockitem_two .boxe {
+    width: clamp(350px, 40vw, 450px);
+    height: clamp(350px, 35vw, 450px);
   }
 
-  .block_three .blockitem_two .box-group .bb {
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    gap: 2rem;
-  }
   .block_three .blockitem_two .box-group .bbb .boxe {
     width: 100%;
+    height: clamp(350px, 35vw, 450px);
+  }
+
+  .block_three .blockitem_two .boxe h1 {
+    font-family: "Inter", sans-serif;
+    font-weight: 900;
+    font-style: Black;
+    font-size: clamp(15px, 1.2vw, 25px);
+    line-height: 35px;
+    letter-spacing: 0%;
+    color: black;
+    text-align: center;
+  }
+
+  .block_three .blockitem_two .boxe p {
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+    font-size: clamp(12px, 1.2vw, 17px);
+    line-height: 30px;
+    letter-spacing: 0%;
+    text-align: center;
+    color: rgba(110, 110, 110, 0.6);
   }
 }
 
@@ -968,7 +992,7 @@ select {
     gap: 2rem;
   }
   .block_three .blockitem_two .box-group .bbb .boxe {
-    width: 450px;
-    height: 350px;
+    width: clamp(350px, 40vw, 450px);
+    height: clamp(350px, 35vw, 450px);
   }
 }
