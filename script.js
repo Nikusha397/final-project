@@ -85,5 +85,41 @@ document.addEventListener('click', function (e) {
 
 
 
+document.addEventListener("DOMContentLoaded", () => {
+  let spots = document.querySelectorAll(".spot");
+  let popup = document.getElementById("spotPopup");
+  let popupTitle = document.getElementById("popupTitle");
+  let popupText = document.getElementById("popupText");
+  let timeoutId;
 
+  spots.forEach(spot => {
+    spot.addEventListener("click", (e) => {
+      e.stopPropagation();
+      popupTitle.textContent = spot.dataset.title;
+      popupText.textContent = spot.dataset.text;
+      popup.style.display = "block";
 
+      let container = spot.parentElement;
+      let popupWidth = popup.offsetWidth;
+      let popupHeight = popup.offsetHeight;
+      let popupTop = spot.offsetTop + spot.offsetHeight / 2 - popupHeight / 2;
+      let popupLeft = spot.offsetLeft - popupWidth - 8;
+      if (popupLeft < 0) {
+        popupLeft = spot.offsetLeft + spot.offsetWidth + 8;
+      }
+      if (popupLeft + popupWidth > container.offsetWidth) {
+        popupLeft = container.offsetWidth - popupWidth - 8;
+      }
+      popup.style.top = popupTop + "px";
+      popup.style.left = popupLeft + "px";
+      if (timeoutId) clearTimeout(timeoutId);
+      timeoutId = setTimeout(() => {
+        popup.style.display = "none";
+      }, 1000);
+    });
+  });
+  document.addEventListener("click", () => {
+    popup.style.display = "none";
+    if (timeoutId) clearTimeout(timeoutId);
+  });
+});
