@@ -376,18 +376,17 @@ select {
   width: 90%;
   display: flex;
   justify-content: space-between;
-  align-items: flex-start;
 }
 
 .block_two .blockitem_one .board .vid {
-  max-width: 600px;
+  max-width: clamp(320px, 45vw, 500px);
   width: 100%;
   height: 510px;
   background-color: rgba(196, 196, 196, 1);
 }
 
 .block_two .blockitem_one .board .video {
-  max-width: 600px;
+  max-width: clamp(320px, 45vw, 500px);
   width: 100%;
   height: 510px;
   background-color: rgb(233, 231, 231);
@@ -397,7 +396,7 @@ select {
   justify-content: center;
   align-items: center;
   position: relative;
-  transform: translate(250px, -350px);
+  transform: translate(200px, -350px);
   transition:
     transform 0.8s ease,
     width 0.8s ease,
@@ -429,18 +428,17 @@ select {
   font-family: "Inter", sans-serif;
   font-weight: 900;
   font-style: Black;
-  font-size: clamp(3rem, 2vw, 1.4rem);
+  font-size: clamp(30px, 1.2vw, 47px);
   color: black;
   text-align: start;
 }
 
 .block_two .blockitem_one .info {
   display: flex;
-  max-width: clamp(280px, 35vw, 800px);
-  flex-shrink: 1;
   flex-direction: column;
+  max-width: clamp(280px, 35vw, 900px);
+  flex-shrink: 1;
   text-align: flex-start;
-  min-width: 0;
   gap: 5rem;
 }
 
@@ -455,9 +453,9 @@ select {
 
 .block_two .blockitem_one .info p {
   font-family: "Inter", sans-serif;
+  font-weight: 400;
   font-size: clamp(14px, 1.2vw, 20px);
   line-height: clamp(22px, 2vw, 30px);
-  font-weight: 400;
   letter-spacing: 0%;
   color: rgba(110, 110, 110, 1);
   text-align: start;
@@ -465,8 +463,6 @@ select {
 
 .block_two .blockitem_one .info .marks {
   display: flex;
-  gap: clamp(1rem, 5vw, 10rem);
-  flex-wrap: wrap;
   flex-direction: row;
   gap: 10rem;
   width: 100%;
@@ -477,9 +473,8 @@ select {
   flex-direction: row;
   text-align: center;
   gap: 1rem;
-  font-family: Inter;
   font-weight: 400;
-  font-size: 17px;
+  font-size: clamp(10px, 1vw, 17px);
   color: rgba(110, 110, 110, 1);
 }
 
@@ -569,13 +564,13 @@ select {
   .block_two .blockitem_one .board .vid {
     max-width: 500px;
     width: 100%;
-    height: clamp(280px, 35vw, 510px);
+    height: 370px;
   }
 
   .block_two .blockitem_one .board .video {
     max-width: 500px;
     width: 100%;
-    height: clamp(280px, 35vw, 510px);
+    height: 370px;
     transform: translateX(250px) translateY(-300px);
   }
 
