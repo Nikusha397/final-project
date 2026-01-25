@@ -1,8 +1,8 @@
-const button = document.querySelector('#menuButton');
-const quoteText = document.querySelector('.quote-text');
-const menuIcon = document.querySelector('.menu-icon');
-const nav = document.querySelector('.about .nav'); 
-const menu = document.getElementById('menu');
+let button = document.querySelector('#menuButton');
+let quoteText = document.querySelector('.quote-text');
+let menuIcon = document.querySelector('.menu-icon');
+let nav = document.querySelector('.about .nav'); 
+let menu = document.getElementById('menu');
 
 function updateLayout() {
   if (window.innerWidth < 1024) {
@@ -32,9 +32,9 @@ button.addEventListener('click', function (e) {
     } else {
       menu.style.display = 'block';
 
-      const rect = button.getBoundingClientRect();
-      const scrollTop = window.scrollY;
-      const scrollLeft = window.scrollX;
+      let rect = button.getBoundingClientRect();
+      let scrollTop = window.scrollY;
+      let scrollLeft = window.scrollX;
 
       menu.style.position = 'absolute';
       menu.style.top = rect.bottom + scrollTop + "px";
@@ -53,8 +53,8 @@ document.addEventListener('click', function (e) {
 
 
 
-  const btn = document.getElementById("sendBtn");
-  const message = document.getElementById("message");
+  let btn = document.getElementById("sendBtn");
+  let message = document.getElementById("message");
 
   btn.addEventListener("click", function(e) {
     e.preventDefault();
@@ -66,8 +66,8 @@ document.addEventListener('click', function (e) {
 
 
 
-  const video = document.getElementById("myVideo");
-  const playBtn = document.querySelector(".play");
+  let video = document.getElementById("myVideo");
+  let playBtn = document.querySelector(".play");
   
   playBtn.addEventListener("click", () => {
     video.play();
