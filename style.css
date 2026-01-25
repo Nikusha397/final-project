@@ -439,7 +439,7 @@ select {
   max-width: clamp(280px, 35vw, 900px);
   flex-shrink: 1;
   text-align: flex-start;
-  gap: 5rem;
+  gap: 4rem;
 }
 
 .block_two .blockitem_one .info span {
