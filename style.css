@@ -984,15 +984,16 @@ select {
   }
 
   .block_three .blockitem_two .box-group .bb {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     flex-direction: column;
-    gap: 2rem;
   }
+
   .block_three .blockitem_two .box-group .bbb .boxe {
-    width: clamp(350px, 40vw, 450px);
-    height: clamp(350px, 35vw, 450px);
+    width: clamp(300px, 40vw, 450px);
+    height: clamp(300px, 35vw, 400px);
+  }
+
+  .block_three .blockitem_two .box-group .bb .boxe {
+    width: clamp(300px, 40vw, 450px);
+    height: clamp(300px, 35vw, 400px);
   }
 }
