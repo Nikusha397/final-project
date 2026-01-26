@@ -561,7 +561,7 @@ select {
 .block_two .blockitem_two .gap {
   display: flex;
   flex-direction: row;
-  gap: 2rem;
+  gap: 5rem;
 }
 
 .block_two .blockitem_two .contain {
