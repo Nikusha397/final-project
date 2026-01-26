@@ -1168,29 +1168,15 @@ select {
 }
 
 .block_five .blockitem_one .video {
-  /* Width and height shrink smoothly */
-  width: clamp(
-    300px,
-    40vw,
-    600px
-  ); /* min 300px, max 600px, scales with viewport */
-  height: clamp(
-    200px,
-    50vh,
-    700px
-  ); /* min 200px, max 700px, scales with viewport */
-
+  width: clamp(300px, 40vw, 600px);
+  height: clamp(200px, 50vh, 700px);
   background-color: rgb(233, 231, 231);
   border: 10px solid white;
   display: flex;
   justify-content: center;
   align-items: center;
   position: relative;
-
-  /* Moves right smoothly as viewport shrinks */
   transform: translateX(calc(10vw)) translateY(-100px);
-
-  /* Smooth animation for both movement and size */
   transition:
     transform 0.8s ease,
     width 0.8s ease,
