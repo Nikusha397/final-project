@@ -1268,11 +1268,12 @@ select {
   display: flex;
   align-items: center;
   padding-left: 1rem;
+  padding-right: 1rem;
   max-width: 90%;
 }
 
 .block_five .blockitem_one .details .low .blue {
-  width: 700px;
+  width: 600px;
   height: 30px;
   background-color: rgba(61, 178, 255, 1);
 }
@@ -1284,10 +1285,11 @@ select {
   display: flex;
   align-items: center;
   padding-left: 1rem;
+  padding-right: 1rem;
 }
 
 .block_five .blockitem_one .details .high .blue {
-  width: 750px;
+  width: 650px;
   height: 30px;
   background-color: rgba(61, 178, 255, 1);
 }
@@ -1296,6 +1298,7 @@ select {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  width: 90%;
 }
 
 .block_five .blockitem_one .details .ss h4 {
