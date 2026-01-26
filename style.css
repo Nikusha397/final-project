@@ -1176,7 +1176,7 @@ select {
   justify-content: center;
   align-items: center;
   position: relative;
-  transform: translateX(calc(10vw)) translateY(-100px);
+  transform: translateX(calc(1vw)) translateY(-100px);
   transition:
     transform 0.8s ease,
     width 0.8s ease,
@@ -1217,7 +1217,6 @@ select {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 100px;
   width: 90%;
   margin: 0 auto;
 }
