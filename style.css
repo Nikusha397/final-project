@@ -1760,6 +1760,10 @@ select {
     background-color: rgba(61, 178, 255, 1);
   }
 
+  .block_five .blockitem_one .details {
+    margin-bottom: 20px;
+  }
+
   .block_six .blockitem_one .testimonial-container {
     justify-content: flex-start;
   }
@@ -1935,6 +1939,10 @@ select {
     display: flex;
     align-items: center;
     padding-left: 1rem;
+  }
+
+  .block_five .blockitem_one .details {
+    margin-bottom: 20px;
   }
 
   .block_five .blockitem_one .details .high .blue {
