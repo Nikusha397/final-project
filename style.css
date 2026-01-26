@@ -1272,7 +1272,7 @@ select {
 }
 
 .block_five .blockitem_one .details .low .blue {
-  width: 600px;
+  width: 500px;
   height: 30px;
   background-color: rgba(61, 178, 255, 1);
 }
