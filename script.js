@@ -101,10 +101,10 @@ document.addEventListener('click', function (e) {
     playBtn2.style.display = "flex";
   });
 
-  const playBtnn = document.querySelector(".player");
+  let playBtnn = document.querySelector(".player");
 
 playBtn.addEventListener("click", () => {
-  const video = document.createElement("video");
+  let video = document.createElement("video");
   video.src = "video/loundry.mp4";
   video.controls = true;           
   video.autoplay = true;           
@@ -167,3 +167,25 @@ if ('scrollRestoration' in history) {
 window.addEventListener('load', () => {
   window.scrollTo(0, 0);
 });
+
+
+let container = document.getElementById("testimonialContainer");
+let squares = document.querySelectorAll(".square");
+
+function slideTo(page) {
+  let card = container.querySelector(".card");
+  let gap = parseInt(getComputedStyle(container).gap) || 0;
+  let cardWidth = card.offsetWidth + gap;
+  let offset = (page - 1) * 2 * cardWidth;
+  container.style.transform = `translateX(-${offset}px)`;
+  squares.forEach(sq => sq.classList.remove("active"));
+  squares[page - 1].classList.add("active");
+}
+
+squares.forEach(sq => {
+  sq.addEventListener("click", () => {
+    slideTo(Number(sq.dataset.page));
+  });
+});
+
+slideTo(1);
