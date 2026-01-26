@@ -84,6 +84,42 @@ document.addEventListener('click', function (e) {
   });
 
 
+  let video2 = document.getElementById("myVideo2");
+  let playBtn2 = document.querySelector(".play2");
+  
+  playBtn2.addEventListener("click", () => {
+    video2.play();
+    playBtn2.style.display = "none";
+  });
+
+  video2.addEventListener("click", () => {
+    video2.pause();
+    playBtn2.style.display = "flex";
+  });
+
+  video2.addEventListener("ended", () => {
+    playBtn2.style.display = "flex";
+  });
+
+  const playBtnn = document.querySelector(".player");
+
+playBtn.addEventListener("click", () => {
+  const video = document.createElement("video");
+  video.src = "video/loundry.mp4";
+  video.controls = true;           
+  video.autoplay = true;           
+  video.style.width = "100%";      
+  video.style.maxWidth = "600px";  
+  video.style.display = "block";   
+  playBtnn.insertAdjacentElement("afterend", video);
+  playBtnn.style.display = "none";
+  video.addEventListener("ended", () => {
+    video.remove();
+    playBtnn.style.display = "flex";
+  });
+});
+
+
 
 document.addEventListener("DOMContentLoaded", () => {
   let spots = document.querySelectorAll(".spot");
