@@ -103,7 +103,7 @@ document.addEventListener('click', function (e) {
 
   let playBtnn = document.querySelector(".player");
 
-playBtn.addEventListener("click", () => {
+playBtnn.addEventListener("click", () => {
   let video = document.createElement("video");
   video.src = "video/loundry.mp4";
   video.controls = true;           
