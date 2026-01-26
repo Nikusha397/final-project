@@ -1235,7 +1235,6 @@ select {
   flex-direction: column;
   flex-shrink: 1;
   text-align: flex-start;
-  gap: 1rem;
   width: clamp(10px, 45vw, 900px);
 }
 
