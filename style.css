@@ -1268,7 +1268,7 @@ select {
   display: flex;
   align-items: center;
   padding-left: 1rem;
-  max-width: 100%;
+  max-width: 90%;
 }
 
 .block_five .blockitem_one .details .low .blue {
@@ -1278,7 +1278,7 @@ select {
 }
 
 .block_five .blockitem_one .details .high {
-  max-width: 100%;
+  max-width: 90%;
   height: 50px;
   background-color: white;
   display: flex;
@@ -1287,7 +1287,7 @@ select {
 }
 
 .block_five .blockitem_one .details .high .blue {
-  width: 800px;
+  width: 750px;
   height: 30px;
   background-color: rgba(61, 178, 255, 1);
 }
