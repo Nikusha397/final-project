@@ -2513,6 +2513,7 @@ select {
   .block_four .blockitem_two .box-group .bb {
     flex-direction: column;
     width: 100%;
+    gap: 4rem;
   }
 
   .block_four .blockitem_two .box-group .bbb .boxe {
