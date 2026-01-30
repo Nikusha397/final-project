@@ -946,9 +946,26 @@ select {
 
 .block_three .blockitem_four .info .buts {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   gap: 1rem;
   width: 100%;
+}
+
+.block_three .blockitem_four .info .buts .buts-inline-video,
+.block_three .blockitem_four .info .buts video {
+  width: 100%;
+  max-width: 100%;
+  flex-basis: 100%;
+  display: block;
+  box-sizing: border-box;
+}
+
+@media (min-width: 601px) {
+  .block_three .blockitem_four .info .buts .buts-inline-video,
+  .block_three .blockitem_four .info .buts video {
+    max-width: 600px;
+  }
 }
 
 .block_three .blockitem_four .info .player {

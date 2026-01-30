@@ -108,11 +108,9 @@ document.addEventListener('click', function (e) {
 playBtnn.addEventListener("click", () => {
   let video = document.createElement("video");
   video.src = "video/loundry.mp4";
-  video.controls = true;           
-  video.autoplay = true;           
-  video.style.width = "100%";      
-  video.style.maxWidth = "600px";  
-  video.style.display = "block";   
+  video.controls = true;
+  video.autoplay = true;
+  video.className = "buts-inline-video";
   playBtnn.insertAdjacentElement("afterend", video);
   playBtnn.style.display = "none";
   video.addEventListener("ended", () => {
