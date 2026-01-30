@@ -189,3 +189,10 @@ squares.forEach(sq => {
 });
 
 slideTo(1);
+
+let footerForm = document.querySelector(".footer-subscribe");
+if (footerForm) {
+  footerForm.addEventListener("submit", function (e) {
+    e.preventDefault();
+  });
+}
