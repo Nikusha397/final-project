@@ -53,15 +53,17 @@ document.addEventListener('click', function (e) {
 
 
 
-  let btn = document.getElementById("sendBtn");
-  let message = document.getElementById("message");
-
-  btn.addEventListener("click", function(e) {
-    e.preventDefault();
-    message.textContent = "Your request is sent";
-    setTimeout(() => {
-      message.textContent = "";
-    }, 3000);
+  document.querySelectorAll(".box .btn button").forEach(function (btn) {
+    btn.addEventListener("click", function (e) {
+      e.preventDefault();
+      var message = this.nextElementSibling;
+      if (message) {
+        message.textContent = "Your request is sent";
+        setTimeout(function () {
+          message.textContent = "";
+        }, 3000);
+      }
+    });
   });
 
 

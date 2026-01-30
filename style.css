@@ -48,6 +48,10 @@ h3 {
   cursor: pointer;
 }
 
+body {
+  overflow-x: hidden;
+}
+
 header {
   width: 100%;
   height: auto;
@@ -285,6 +289,7 @@ button {
 
 .blockitem_three .box input {
   width: 250px;
+  max-width: 100%;
   height: 70px;
   outline: none;
   background-color: rgb(92, 190, 255);
@@ -318,6 +323,7 @@ button {
 
 .blockitem_three .box #service {
   width: 250px;
+  max-width: 100%;
   height: 70px;
   outline: none;
   background-color: rgb(92, 190, 255);
@@ -350,6 +356,7 @@ select {
 
 .box {
   width: 700px;
+  max-width: 100%;
   height: auto;
   background-color: rgba(61, 178, 255, 1);
   display: flex;
@@ -364,11 +371,81 @@ select {
   margin-top: 0.5rem;
 }
 
+.blockitem_three .box {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  max-width: 800px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 2rem 0;
+}
+
+.blockitem_three .box .info {
+  width: 100%;
+  flex-shrink: 1;
+  text-align: flex-start;
+  gap: 2rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.blockitem_three .box .info span {
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 30px;
+  letter-spacing: 15%;
+  color: white;
+  padding-left: 3.3rem;
+}
+
+.blockitem_three .box .info p {
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 30px;
+  letter-spacing: 0%;
+  color: white;
+  text-align: start;
+  padding-left: 3.3rem;
+}
+
+.blockitem_three .box .info h1 {
+  font-family: "Inter", sans-serif;
+  font-weight: 900;
+  font-style: Black;
+  font-size: 45px;
+  line-height: 60px;
+  letter-spacing: 0%;
+  color: white;
+  text-align: start;
+  padding-left: 3.3rem;
+}
+
+.blockitem_three .box .inp {
+  width: 90%;
+}
+
+.blockitem_three .box .inputs {
+  justify-content: flex-start;
+  margin-left: 6rem;
+}
+
+.blockitem_three .box .btn {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+  padding-left: 3.3rem;
+}
+
 .blockitem_three .box button {
   width: 10rem;
   height: 3rem;
   background-color: white;
-  color: black;
+  color: rgba(61, 178, 255, 1);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -377,7 +454,7 @@ select {
   font-family: "Inter", sans-serif;
   font-weight: 600;
   font-size: 15px;
-  color: rgba(61, 178, 255, 1);
+  cursor: pointer;
 }
 
 .block_two {
@@ -413,10 +490,7 @@ select {
   align-items: center;
   position: relative;
   transform: translate(200px, -350px);
-  transition:
-    transform 0.8s ease,
-    width 0.8s ease,
-    height 0.8s ease;
+  transition: transform 0.8s ease, width 0.8s ease, height 0.8s ease;
 }
 
 .video video {
@@ -480,7 +554,7 @@ select {
 .block_two .blockitem_one .info .marks {
   display: flex;
   flex-direction: row;
-  gap: 10rem;
+  gap: 2rem;
   width: 100%;
 }
 
@@ -1193,10 +1267,7 @@ select {
   align-items: center;
   position: relative;
   transform: translateX(calc(1vw)) translateY(-100px);
-  transition:
-    transform 0.8s ease,
-    width 0.8s ease,
-    height 0.8s ease;
+  transition: transform 0.8s ease, width 0.8s ease, height 0.8s ease;
 }
 
 .block_five .blockitem_one .video video {
@@ -1695,9 +1766,10 @@ select {
   color: rgba(61, 178, 255, 1);
 }
 
-.box .btn {
+.block_seven .blockitem_one .box .btn {
   display: flex;
-  justify-content: start;
+  flex-direction: column;
+  align-items: flex-start;
   padding-left: 3.3rem;
   width: 100%;
 }
@@ -1751,6 +1823,10 @@ select {
 }
 
 @media (max-width: 1024px) {
+  header {
+    gap: 5rem;
+  }
+
   .block_one {
     width: 100%;
   }
@@ -1762,6 +1838,7 @@ select {
 
   .block_one .blockitem_one .about {
     width: 90%;
+    max-width: 100%;
     padding-left: 0.5rem;
   }
 
@@ -1820,7 +1897,16 @@ select {
     max-width: 500px;
     width: 100%;
     height: 370px;
-    transform: translateX(250px) translateY(-300px);
+    transform: translate(0, -300px);
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .block_two .blockitem_one .board {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
   }
 
   .block_two .blockitem_one .info {
@@ -2077,6 +2163,10 @@ select {
     gap: 10rem;
   }
 
+  .block_seven .blockitem_one .info .marks {
+    gap: 2rem;
+  }
+
   .block_seven .blockitem_one .info .gap {
     display: flex;
     text-align: center;
@@ -2093,6 +2183,14 @@ select {
 }
 
 @media (max-width: 768px) {
+  header {
+    gap: 4rem;
+  }
+
+  .block_one .blockitem_one {
+    padding-bottom: 100px;
+  }
+
   .block_one .blockitem_one .links {
     display: none;
   }
@@ -2144,10 +2242,24 @@ select {
   }
 
   .block_two .blockitem_one .board .video {
-    max-width: 450px;
+    max-width: 100%;
     width: 100%;
-    height: 370px;
-    transform: translateX(20px) translateY(-350px);
+    height: 300px;
+    transform: translate(0, -200px);
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .block_two .blockitem_one .board .vid {
+    max-width: 100%;
+    height: 300px;
+  }
+
+  .block_two .blockitem_one .board {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
   }
 
   .block_two .blockitem_one .info .marks {
@@ -2157,6 +2269,10 @@ select {
 
   .block_two .blockitem_two {
     height: auto;
+  }
+
+  .block_two .blockitem_two .gap {
+    gap: 2rem;
   }
 
   .block_two .blockitem_two .contain {
@@ -2292,8 +2408,62 @@ select {
     font-size: 0.55rem;
   }
 
+  .block_three .blockitem_four .info .marks {
+    gap: 1rem;
+  }
+
+  .block_four .blockitem_two .boxe .marks {
+    gap: 2rem;
+  }
+
+  .block_seven .blockitem_one .box input {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .block_seven .blockitem_one .box .inputs #type {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .block_seven .blockitem_one .box .inputs {
+    margin-left: 2rem;
+  }
+
+  .block_seven .blockitem_one .info .marks {
+    gap: 1rem;
+  }
+
+  .block_seven .blockitem_one .box .info {
+    padding-left: 1rem;
+  }
+
+  .block_seven .blockitem_one .box .info span,
+  .block_seven .blockitem_one .box .info p,
+  .block_seven .blockitem_one .box .info h1 {
+    padding-left: 1rem;
+  }
+
+  .blockitem_three .box .inputs {
+    margin-left: 0;
+  }
+
+  .blockitem_three .box .info span,
+  .blockitem_three .box .info p,
+  .blockitem_three .box .info h1 {
+    padding-left: 1rem;
+  }
+
+  .blockitem_three .box .btn {
+    padding-left: 1rem;
+  }
+
+  .block_seven .blockitem_one .box .btn {
+    padding-left: 1rem;
+  }
+
   .block_seven .blockitem_one .inputs input {
-    margin-right: 20px;
-    min-width: 50px;
+    margin-right: 0;
+    min-width: 0;
   }
 }
